@@ -1,0 +1,151 @@
+<?php
+    require_once 'controller.php';
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e3831a00ca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/particles.js-master/demo/css/style.css">
+    <title>PULSE</title>
+</head>
+<body oncontextmenu="return false;">
+    <!--<div id="particles-js">
+        <h1 class="stack" style="--stacks: 3;">
+            <span style="--index: 0;">PULSE</span>
+            <span style="--index: 1;">PULSE</span>
+            <span style="--index: 2;">PULSE</span>
+        </h1>
+        <p>Student body association of Department of Electronics and Communication Engineering, KL University</p>
+        <h2>About</h2>
+        <a href="#about"><i class="fa fa-arrow-down"></i></a>
+    </div>-->
+    <div class="container">
+        <!--<div class="home-container">
+            <video autoplay loop muted>
+                <source src="assets/images/video9.mp4">
+            </video>
+            <div class="pulse-name">
+                <h1>PULSE</h1>
+            </div>
+        </div>-->
+        <div class="pulse-bg">
+            <img src="assets/images/earth.png" alt="pulse">
+        </div>
+        <div class="remain-content" id="about" style="margin-top: 3pc;">
+            <div class="contact-home">
+                <div class="contact-home-heading">
+                    <img src="assets/images/pulse.png" alt="">
+                    <h1>ICONIC ENGINEER</h1>
+                    <img src="assets/images/pulse.png" alt="">
+                </div>
+                <!-- <?php
+                if(count($errors) > 0){ ?>
+                    <div style="background-color: red;">
+                        <?php
+                        foreach($errors as $showerror){?>
+                            <li><?php echo $showerror; ?></li>
+                            <?php }  ?>
+                    </div>
+                <?php
+                }
+                ?> -->
+                <!-- <div class="contact-home-data">
+                    <form action="contact.php" method="POST">
+                        <input type="text" name="name" id="name" placeholder="Fullname" required>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <input type="number" name="mobile" id="mobile" placeholder="Contact Number" required>
+                        <textarea name="message" id="message" cols="30" rows="5" placeholder="Message..." required></textarea>
+                        <input type="submit" name="contact" value="Submit">
+                    </form>
+                </div> -->
+            </div>
+            <div class="iconic-main">
+                <img src="assets/images/iconic-engineer.png" alt="iconic-engineer"><br>
+                <a href="#">Register</a>
+            </div>
+            <!-- <div class="department-home">
+                <div class="department-home-data">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1913.348805242197!2d80.624016!3d16.440177!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x92904198ac008557!2sK%20L%20U%20R%26D%20ECE%20BLOCK!5e0!3m2!1sen!2sin!4v1657708176029!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="department-desc">
+                        <h1>ECE Department</h1><br>
+                        <p>Electronics is not just a department it's a field, a masterpiece of engineering. Communication in many aspects is possible with electronics. It's the heart of engineering. In KLU, ECE department is one of the biggest and highest counts of researches conducting department. We are proud to be part of it.</p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="footer">
+                <img src="assets/images/pulse-logo.png" alt="logo">
+                <nav>
+                    <ul>
+                        <li><a href="index.php">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="events.php">EVENTS</a></li>
+                        <li><a href="clubs.php">CLUBS</a></li>
+                        <li><a href="gallery.php">GALLERY</a></li>
+                        <li><a href="faculty.php">FACULTY</a></li>
+                        <li><a href="blood.php">BLOOD</a></li>
+                        <li><a href="team.php">TEAM</a></li>
+                        <li><a href="contact.php">CONTACT</a></li>
+                        <?php
+            if(isset($_SESSION['email'])){ ?>
+                <li><a href="profile.php">Profile</a></li>
+             <?php } else {
+            ?>
+            <li><a href="signin.php">Signin</a></li>
+            <li><a href="signup.php">Signup</a></li>
+        <?php } ?>
+                    </ul>
+                </nav>
+                <div class="social-media">
+                    <a href="https://twitter.com/pulseklu/" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://m.facebook.com/pulsekluofficial/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/pulseklu/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://t.me/+22jJ0TR1uCtkZmI9" target="_blank"><i class="fa fa-telegram"></i></a>
+            <a href="https://youtube.com/channel/UCbFxni_lTlhTF5-XingZXCA" target="_blank"><i class="fa fa-youtube"></i></a>
+                </div>
+                <p>Copyright © 2022 All rights reserved | PULSE </p>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-sticky" id="bars">
+        <i class="fa fa-bars" onclick="Open()"></i>
+    </div>
+    <div class="navigation-sticky" id="close">
+        <i class="fa fa-times" onclick="Close()"></i>
+    </div>
+    <div class="navigation-logo">
+        <a href="user.php"><img src="assets/images/pulse-logo.png" alt="logo"></a>
+    </div>
+    <div class="navigation-bar-sticky" id="navi">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="clubs.html">CLUBS</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="team.html">TEAM</a></li>
+                        <li><a href="join-pulse.html">JOIN PULSE</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="social-media" style="width: 100%;">
+            <a href="https://twitter.com/pulseklu/" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://m.facebook.com/pulsekluofficial/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/pulseklu/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://t.me/+22jJ0TR1uCtkZmI9" target="_blank"><i class="fa fa-telegram"></i></a>
+            <a href="https://youtube.com/channel/UCbFxni_lTlhTF5-XingZXCA" target="_blank"><i class="fa fa-youtube"></i></a>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/particles.js-master/particles.js"></script>
+    <script src="assets/particles.js-master/demo/js/app.js"></script>
+    <script src="assets/particles.js-master/particlesjs-config.json"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
